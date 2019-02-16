@@ -14,5 +14,6 @@ print(pm.get_pairwise_matrix)
 pm.get_pairwise_matrix_plot('2ok6','CA')
 ```
 
-Sample plot
+Sample plot   
+
 ![](./assets/2ok6_CA.png)
