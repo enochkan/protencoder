@@ -14,6 +14,5 @@ setup(name='pypairwisemap',
       classifiers=[
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 2.7',
-        'Topic :: Protein Engineering :: Bioinformatics',
       ],
       zip_safe=False)
