@@ -19,11 +19,10 @@ def get_pairwise_matrix(pdb,chn,frg_beg,frg_end,atm):
     structure=parser.get_structure('X', './pdb/'+'pdb'+pdb+'.ent')
     remove_directory('./obsolete')
     #loop through structure
-    for chain in structure.get_chains():
-        if(chain.get_id()==chn):
-            for atom in chain.get_atoms():
-                if(atom.get_id()==atm):
-                    coords.append(atom.get_coord())
+    model = structure[0]; chain = model[chn]
+    for atom in chain.get_atoms():
+        if(atom.get_id()==atm):
+            coords.append(atom.get_coord())
     #initializing matrix
     pwmat = np.zeros((frg_end,frg_end), dtype='float')
     for row in range(0, frg_end):

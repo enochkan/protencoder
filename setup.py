@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='pypairwisemap',
-      version='0.5',
+      version='0.6',
       description='Python utility for pairwise mapping of atomic spacing to represent protein structures in 2D',
       url='https://github.com/kanxx030/pdb-pairwise-mapping',
       author='Chi Nok Enoch Kan',

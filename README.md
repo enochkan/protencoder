@@ -6,6 +6,11 @@ The method of encoding protein structures in terms of pairwise distances between
 
 To read more: [Generative Modeling for Protein Structures](https://papers.nips.cc/paper/7978-generative-modeling-for-protein-structures.pdf)
 
+### Installation
+```python
+pip install pypairwisemap==0.6
+```
+
 ### Usage
 ```python
 import pypairwisemap as pm
