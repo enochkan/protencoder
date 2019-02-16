@@ -11,7 +11,7 @@ def make_directory(directory):
 def remove_directory(directory):
     shutil.rmtree(directory)
 
-def get_pairwise_matrix(pdb,chn,frg,atm):
+def get_pairwise_matrix(pdb,chn,frg_beg,frg_end,atm):
     coords = []
     #file IO
     parser=PDBParser()
@@ -20,23 +20,21 @@ def get_pairwise_matrix(pdb,chn,frg,atm):
     remove_directory('./obsolete')
     #loop through structure
     for chain in structure.get_chains():
-        print(chain)
         if(chain.get_id()==chn):
             for atom in chain.get_atoms():
                 if(atom.get_id()==atm):
                     coords.append(atom.get_coord())
     #initializing matrix
-    pwmat = np.zeros((frg,frg), dtype='float')
-    for row in range(0, frg):
-        for col in range(0,frg):
+    pwmat = np.zeros((frg_end,frg_end), dtype='float')
+    for row in range(0, frg_end):
+        for col in range(0,frg_end):
             pwmat[row,col]=np.linalg.norm(coords[col]-coords[row])
     #return matrix
     return pwmat
 
 
-def get_pairwise_matrix_plot(pdb,chn,frg,atm):
+def get_pairwise_matrix_plot(pdb,chn,frg_beg,frg_end,atm):
     make_directory('./plots/')
-    mat = get_pairwise_matrix(pdb,atm)
+    mat = get_pairwise_matrix(pdb,chn,frg_beg,frg_end,atm)
     plt.matshow(mat)
-    plt.savefig('./plots/'+pdb+'_'+atm+'.png')
-
+    plt.savefig('./plots/'+pdb+'_'+str(frg_beg)+'_'+str(frg_end)+'_'+atm+'.png')

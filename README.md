@@ -10,10 +10,10 @@ To read more: [Generative Modeling for Protein Structures](https://papers.nips.c
 ```python
 import pypairwisemap as pm
 #prints pairwise matrix
-#arguments: pdb id, chain, fragment length, atom type
-print(pm.get_pairwise_matrix('2ok6','A',12,'CA'))
+#arguments: pdb id, chain, fragment begin, fragment end, atom type
+print(pm.get_pairwise_matrix('2ok6','A',1, 12,'CA'))
 #saves pairwise matrix plot under './plots'
-pm.get_pairwise_matrix_plot('2ok6','A',12,'CA')
+pm.get_pairwise_matrix_plot('2ok6','A',1, 12,'CA')
 ```
 
 ### Sample plot   
