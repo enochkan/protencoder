@@ -42,4 +42,3 @@ def get_pairwise_matrix_plot(pdb,chn,frg_beg,frg_end,atm):
     plt.matshow(mat)
     plt.savefig('./plots/'+pdb+'_'+str(frg_beg)+'_'+str(frg_end)+'_'+atm+'.png')
 
-get_pairwise_matrix_plot('2ok6','A',1,64,'CA')
