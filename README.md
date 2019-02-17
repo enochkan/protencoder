@@ -8,7 +8,7 @@ To read more: [Generative Modeling for Protein Structures](https://papers.nips.c
 
 ### Installation
 ```python
-pip install pypairwisemap==0.6
+pip install pypairwisemap==0.8
 ```
 
 ### Usage

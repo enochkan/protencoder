@@ -22,11 +22,12 @@ def get_pairwise_matrix(pdb,chn,frg_beg,frg_end,atm):
     #loop through structure
     model = structure[0]; chain = model[chn]
     for atom in chain.get_atoms():
-        if(atom.get_id()==atm):
+        if(atom.get_id() == atm):
             coords.append(atom.get_coord())
     #initializing matrix
-    warnings.warn('fragment is larger than the number of residues')
-    if(len(coords)<frg_end): return None
+    if(len(coords) < frg_end):
+        warnings.warn('fragment is larger than the number of residues')
+        return None
     pwmat = np.zeros((frg_end,frg_end), dtype='float')
     for row in range(0, frg_end):
         for col in range(0,frg_end):
@@ -40,3 +41,5 @@ def get_pairwise_matrix_plot(pdb,chn,frg_beg,frg_end,atm):
     mat = get_pairwise_matrix(pdb,chn,frg_beg,frg_end,atm)
     plt.matshow(mat)
     plt.savefig('./plots/'+pdb+'_'+str(frg_beg)+'_'+str(frg_end)+'_'+atm+'.png')
+
+get_pairwise_matrix_plot('2ok6','A',1,64,'CA')
