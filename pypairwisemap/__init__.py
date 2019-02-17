@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 import shutil
+import warnings
 
 def make_directory(directory):
     if not os.path.exists(directory):
@@ -24,6 +25,8 @@ def get_pairwise_matrix(pdb,chn,frg_beg,frg_end,atm):
         if(atom.get_id()==atm):
             coords.append(atom.get_coord())
     #initializing matrix
+    warnings.warn('fragment is larger than the number of residues')
+    if(len(coords)<frg_end): return None
     pwmat = np.zeros((frg_end,frg_end), dtype='float')
     for row in range(0, frg_end):
         for col in range(0,frg_end):
