@@ -1,13 +1,13 @@
 from setuptools import setup
 
-setup(name='pypairwisemap',
-      version='0.8',
-      description='Python utility for pairwise mapping of atomic spacing to represent protein structures in 2D',
-      url='https://github.com/kanxx030/pdb-pairwise-mapping',
+setup(name='protencoder',
+      version='0.9',
+      description='Python utility to implement various encoding methods for protein structures',
+      url='https://github.com/kanxx030/protencoder',
       author='Chi Nok Enoch Kan',
       author_email='kanxx030@gmail.com',
       license='MIT',
-      packages=['pypairwisemap'],
+      packages=['protencoder'],
       install_requires=[
           'biopython','numpy','matplotlib'
       ],
