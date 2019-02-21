@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='protencoder',
-      version='0.9',
+      version='1.0',
       description='Python utility to implement various encoding methods for protein structures',
       url='https://github.com/kanxx030/protencoder',
       author='Chi Nok Enoch Kan',

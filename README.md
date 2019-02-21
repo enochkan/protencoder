@@ -1,4 +1,4 @@
-# protencoder
+# protencoder 1.0
 ### Introduction
 This is a Python utility to implement various encoding methods for protein structures including: pairwise mapping, vector encoding and one-hot encoding. 
 
@@ -27,7 +27,7 @@ Single-Site Mutations](https://pdfs.semanticscholar.org/69fa/0b70fc0ca2a6826f70a
 
 ### Installation
 ```python
-pip install protencoder==0.9
+pip install protencoder==1.0
 ```
 
 ### Usage
