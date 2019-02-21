@@ -2,7 +2,7 @@
 ### Introduction
 This is a Python utility to implement various encoding methods for protein structures including: pairwise mapping, 20-20 vector and one-hot encoding. 
 
-**Note: ~~pypairwisemap~~ has been renamed to protencoder in 0.9**
+**Note: ~~pypairwisemap~~ has been renamed to [protencoder](https://pypi.org/project/protencoder/) in 0.9**
 
 #### Pairwise mapping
 
