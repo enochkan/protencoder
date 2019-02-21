@@ -17,7 +17,7 @@ window centered on the mutation site. Each position in the window except the mut
 site is represented by 20 binary numbers (0 or 1) that represent 20
 possible amino acids at the position in the following order: 
 ```A, C, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, Y```
-The number representing the amino acid is set to 1 and the rest are set to zero. For example, if Alanine is mutated from Threonine then the vector would be 
+The number representing the new residue is set to ```1``` and the rest are set to ```0```. The old residue replaced by the mutation is set to ```-1```. For example, if Alanine is mutated from Threonine then the vector would be 
 ```[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0]``` 
 
 To read more about vector encoding: [Prediction of protein stability changes for single-site mutations using support vector machines](https://www.ncbi.nlm.nih.gov/pubmed/16372356), [A neural-network-based method for predicting
