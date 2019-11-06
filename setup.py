@@ -1,9 +1,9 @@
 from setuptools import setup
 
 setup(name='protencoder',
-      version='1.0',
+      version='0.0.1',
       description='Python utility to implement various encoding methods for protein structures',
-      url='https://github.com/kanxx030/protencoder',
+      url='https://github.com/chinokenochkan/protencoder',
       author='Chi Nok Enoch Kan',
       author_email='kanxx030@gmail.com',
       license='MIT',

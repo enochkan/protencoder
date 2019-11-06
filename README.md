@@ -49,3 +49,6 @@ get_vector_encoding('2ok6','A','M',84,3)
 ### Sample plot   
 #### Pairwise mapping with (n>900)
 ![](./assets/2ok6_CA.png)
+
+### Author
+Chi Nok Enoch Kan/ [@chinokenochkan](https://github.com/chinokenochkan)
